@@ -15,7 +15,7 @@
 
          </ul>
       </div>
-         <a class="btn btn-success mt-3" href="{route('mahasiswas.index')}">Kembali</a>
+         <a class="btn btn-success mt-3" href="{{route('mahasiswa.index')}}">Kembali</a>
       </div>
     </div>
 </div>

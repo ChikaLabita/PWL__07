@@ -22,27 +22,27 @@
                     <div class="form-group">
                         <label for="Nim">Nim</label>
                         <br>
-                        <input type="text" name="nim" class="form-control" id="Nim" aria-describedby="Nim" >
+                        <input type="text" name="Nim" class="form-control" id="Nim" aria-describedby="Nim" >
                     </div>
                     <div class="form-group">
                         <label for="Nama">Nama</label>
                         <br>
-                        <input type="Nama" name="nama" class="form-control" id="Nama" aria-describedby="Nama" >
+                        <input type="Nama" name="Nama" class="form-control" id="Nama" aria-describedby="Nama" >
                     </div>
                     <div class="form-group">
                         <label for="Kelas">Kelas</label>
                         <br>
-                        <input type="Kelas" name="kelas" class="form-control" id="Kelas" aria-describedby="password" >
+                        <input type="Kelas" name="Kelas" class="form-control" id="Kelas" aria-describedby="password" >
                     </div>
                     <div class="form-group">
                         <label for="Jurusan">Jurusan</label>
                         <br>
-                        <input type="Jurusan" name="jurusan" class="form-control" id="Jurusan" aria-describedby="Jurusan" >
+                        <input type="Jurusan" name="Jurusan" class="form-control" id="Jurusan" aria-describedby="Jurusan" >
                     </div>
                     <div class="form-group">
                         <label for="No_Handphone">No_Handphone</label>
                         <br>
-                        <input type="No_Handphone" name="no_handphone" class="form-control" id="No_Handphone" aria-describedby="No_Handphone" >
+                        <input type="No_Handphone" name="No_Handphone" class="form-control" id="No_Handphone" aria-describedby="No_Handphone" >
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
