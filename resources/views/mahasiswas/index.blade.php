@@ -23,6 +23,8 @@
         <th>Kelas</th>
         <th>Jurusan</th>
         <th>No_Handphone</th>
+        <th>E-mail</th>
+        <th>Tanggal_Lahir</th>
         <th width="280px">Action</th>
     </tr>
     @foreach ($mahasiswas as $Mahasiswa)
@@ -32,6 +34,8 @@
         <td>{{ $Mahasiswa->kelas }}</td>
         <td>{{ $Mahasiswa->jurusan }}</td>
         <td>{{ $Mahasiswa->no_handphone }}</td>
+        <td>{{ $Mahasiswa->email }} </td>
+        <td>{{ $Mahasiswa->tanggal_lahir }}</td>
         <td>
             <form action="{{ route('mahasiswa.destroy', ['mahasiswa'=>$Mahasiswa->nim])}}" method="POST">
                 <a class="btn btn-info" href="{{ route('mahasiswa.show', [$Mahasiswa->nim]) }}">Show</a>
@@ -45,5 +49,6 @@
  @endforeach
  <div>
 </div>
- </table>
+</table>
+<div class="float-left my-2">{{ $mahasiswas-> links()}}</div>
 @endsection

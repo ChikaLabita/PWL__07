@@ -15,9 +15,9 @@ class MahasiswaController extends Controller
     public function index()
     {
         //fungsi eloquent menampilkan data menggunakan pagination
-       $mahasiswas = Mahasiswa::all(); //mengambil semua isi tabel
-       $posts=Mahasiswa::orderBy('nim','desc')->paginate(6);
-       return view('mahasiswas.index',compact('mahasiswas','posts'))
+       //$mahasiswas = Mahasiswa::all(); //mengambil semua isi tabel
+       $mahasiswas=Mahasiswa::orderBy('nim','asc')->paginate(5);
+       return view('mahasiswas.index',compact('mahasiswas'))
        ->with('i',(request()->input('page', 1) - 1) * 5);
     }
 
@@ -46,6 +46,8 @@ class MahasiswaController extends Controller
             'Kelas'=> 'required',
             'Jurusan'=> 'required',
             'No_Handphone'=> 'required',
+            'Email' => 'required',
+            'Tanggal_Lahir' => 'required'
         ]);
 
         //fungsi eloquent untuk menambah data
@@ -98,6 +100,8 @@ class MahasiswaController extends Controller
             'Kelas'=> 'required',
             'Jurusan'=> 'required',
             'No_Handphone'=> 'required',
+            'Email' => 'required',
+            'Tanggal_Lahir' => 'required'
         ]);
 
         //fungsi eloquent untuk mengupdate data inputan kita

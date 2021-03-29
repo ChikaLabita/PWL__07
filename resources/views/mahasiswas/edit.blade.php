@@ -45,7 +45,17 @@
                <br>
                <input type="No_Handphone" name="No_Handphone" class="form-control" id="No_Handphone" value="{{ $Mahasiswa->No_Handphone }}" aria describedby="No_Handphone" >
             </div>
-               <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="form-group">
+               <label for="Email">E-mail</label>
+               <br>
+               <input type="Email" name="Email" class="form-control" id="Email" aria-describedby="Email" >
+            </div>
+            <div class="form-group">
+               <label for="Tanggal_Lahir">Tanggal_Lahir</label>
+               <br>
+               <input type="Tanggal_Lahir" name="Tanggal_Lahir" class="form-control" id="Tanggal_Lahir" aria-describedby="Tanggal_Lahir" >
+               </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
             </form>
          </div>
       </div>
