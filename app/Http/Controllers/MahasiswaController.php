@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Mahasiswa;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MahasiswaController extends Controller
 {
@@ -124,5 +125,14 @@ class MahasiswaController extends Controller
         Mahasiswa::find($Nim)->delete();
         return redirect()->route('mahasiswa.index')
             ->with('success', 'Mahasiswa Berhasil Dihapus');
+    }
+
+    public function search(Request $request){
+        $search = $request -> nim;
+
+        $mahasiswas = DB::table('mahasiswas')->
+        where('nim', 'like', "%".$search."%")->paginate(5);
+
+        return view('mahasiswas.index', ['mahasiswas' => $mahasiswas]);
     }
 }

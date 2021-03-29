@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MahasiswaController;
+use App\Models\Mahasiswa;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,7 +17,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::resource('mahasiswa', MahasiswaController::class);
-
+Route::get('/search', [MahasiswaController::class, 'search']);
 Auth::routes();
 
 /*Route::get('/', function () {

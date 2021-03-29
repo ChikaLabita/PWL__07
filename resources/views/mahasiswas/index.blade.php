@@ -6,6 +6,11 @@
             <div class="pull-left mt-2" style="text-align: center">
                 <h2>JURUSAN TEKNOLOGI INFORMASI-POLITEKNIK NEGERI MALANG</h2>
             </div>
+            <div class="float-left my-2">
+            <form action="{{url('search')}}" method="GET">
+                <input type="search" name="nim" class="form-control" id="search" aria-describedby="search" placeholder="Search..."> <input type="submit" value="Search">
+            </form>
+            </div>
             <div class="float-right my-2">
                 <a class="btn btn-success" href="{{ route('mahasiswa.create') }}"> Input Mahasiswa</a>
             </div>
