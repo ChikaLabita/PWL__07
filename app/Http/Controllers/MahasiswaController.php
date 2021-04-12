@@ -72,7 +72,7 @@ class MahasiswaController extends Controller
         //fungsi eloquent untuk menambah data dengan relasi belongsTo
         $mahasiswas->kelas()->associate($kelas);
         $mahasiswas->save();
-        
+
         //fungsi eloquent untuk menambah data
         //Mahasiswa::create($request->all());
 
@@ -90,8 +90,11 @@ class MahasiswaController extends Controller
     public function show($Nim)
     {
          //Menampilkan detail data dengan menentukan/berdasarkan NIM Mahasiswa 
-         $Mahasiswa = Mahasiswa::find($Nim);
-         return view('mahasiswas.detail', compact('Mahasiswa'));
+         //$Mahasiswa = Mahasiswa::find($Nim);
+         //return view('mahasiswas.detail', compact('Mahasiswa'));
+         $mahasiswas = Mahasiswa::with('kelas')->where('nim', $Nim)-> first();
+         
+         return view('mahasiswas.detail', ['Mahasiswa' => $mahasiswas]);
     }
 
     /**
