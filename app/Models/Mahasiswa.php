@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Mahasiswa extends Model
 {
     protected $table='mahasiswas'; //Eloquent akan membuat model Mahasiswa menyimpan record ditabel mahasiswas
-    public $timestamps= false;
+    //public $timestamps= false;
     protected $primaryKey = 'nim'; // Memanggil isi DB dengan primaryKey
     /**
      * The attributes that are mass assignable
