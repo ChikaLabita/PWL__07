@@ -10,6 +10,7 @@
             <form action="{{url('search')}}" method="GET">
                 <input type="search" name="nim" class="form-control" id="search" aria-describedby="search" placeholder="Search..."> <input type="submit" value="Search">
             </form>
+            {{$paginate->links()}}
             </div>
             <div class="float-right my-2">
                 <a class="btn btn-success" href="{{ route('mahasiswa.create') }}"> Input Mahasiswa</a>
@@ -32,11 +33,11 @@
         <th>Tanggal_Lahir</th>
         <th width="280px">Action</th>
     </tr>
-    @foreach ($mahasiswas as $Mahasiswa)
+    @foreach ($paginate as $Mahasiswa)
     <tr>
         <td>{{ $Mahasiswa->nim }}</td>
         <td>{{ $Mahasiswa->nama }}</td>
-        <td>{{ $Mahasiswa->kelas }}</td>
+        <td>{{ $Mahasiswa->kelas->nama_kelas}}</td>
         <td>{{ $Mahasiswa->jurusan }}</td>
         <td>{{ $Mahasiswa->no_handphone }}</td>
         <td>{{ $Mahasiswa->email }} </td>
